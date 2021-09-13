@@ -26,7 +26,6 @@ func NewGetOrderLogic(ctx context.Context, svcCtx *svc.ServiceContext) GetOrderL
 }
 
 func (l *GetOrderLogic) GetOrder(req types.OrderReq) (*types.OrderReply, error) {
-	// todo: add your logic here and delete this line
 	user, err := l.svcCtx.UserRpc.GetUser(l.ctx, &userclient.IdRequest{
 		Id: "1",
 	})
